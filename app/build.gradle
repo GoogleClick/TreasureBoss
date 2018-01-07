@@ -1,0 +1,53 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    defaultConfig {
+        applicationId "com.ricer.treasureboss"
+        minSdkVersion 19
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary= true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support:support-v4:26.1.0'
+    implementation 'com.android.support:support-vector-drawable:26.1.0'
+    testImplementation 'junit:junit:4.12'
+    compile 'com.jakewharton:butterknife:7.0.1'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+    implementation files('libs/alipaysdk.jar')
+    implementation files('libs/alipaysecsdk.jar')
+    implementation files('libs/alipayutdid.jar')
+    implementation files('libs/android-async-http-master.jar')
+    implementation files('libs/fastjson-1.2.4.jar')
+    implementation files('libs/MobCommons-2016.1107.1809.jar')
+    implementation files('libs/MobTools-2016.1107.1809.jar')
+    implementation files('libs/ShareSDK-Alipay-2.7.10.jar')
+    implementation files('libs/ShareSDK-Alipay-Core-2.7.10.jar')
+    implementation files('libs/ShareSDK-Alipay-Moments-2.7.10.jar')
+    implementation files('libs/ShareSDK-Core-2.7.10.jar')
+    implementation files('libs/ShareSDK-Evernote-2.7.10.jar')
+    implementation files('libs/ShareSDK-QQ-2.7.10.jar')
+    implementation files('libs/ShareSDK-QZone-2.7.10.jar')
+    implementation files('libs/ShareSDK-Renren-2.7.10.jar')
+    implementation files('libs/ShareSDK-ShortMessage-2.7.10.jar')
+    implementation files('libs/ShareSDK-SinaWeibo-2.7.10.jar')
+    implementation files('libs/ShareSDK-TencentWeibo-2.7.10.jar')
+    implementation files('libs/ShareSDK-Wechat-2.7.10.jar')
+    implementation files('libs/ShareSDK-Wechat-Core-2.7.10.jar')
+    implementation files('libs/ShareSDK-Wechat-Favorite-2.7.10.jar')
+    implementation files('libs/ShareSDK-Wechat-Moments-2.7.10.jar')
+}
