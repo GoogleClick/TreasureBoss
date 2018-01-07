@@ -27,8 +27,8 @@ public class MyApplication extends Application {
         mainThreadId = android.os.Process.myTid();  //从系统获取当前线程Id
 
         //初始化未捕获异常处理器
-        CrashHandler.getInstance().init();
+//        CrashHandler.getInstance().init();
         //初始化ShareSDK
-        ShareSDK.initSDK(this);
+//        ShareSDK.initSDK(this);
     }
 }

@@ -86,7 +86,8 @@ public abstract class LoadingPage extends FrameLayout {
         view_error.setVisibility(state_current == STATE_ERROR ? View.VISIBLE : View.INVISIBLE);
         view_empty.setVisibility(state_current == STATE_EMPTY ? View.VISIBLE : View.INVISIBLE);
         if (view_success == null) {
-            addView(View.inflate(mContext, layoutId(), null));
+            view_success=View.inflate(mContext, layoutId(), null);
+            addView(view_success);
         }
         view_success.setVisibility(state_current == STATE_SUCCESS ? View.VISIBLE : View.INVISIBLE);
     }
@@ -144,12 +145,12 @@ public abstract class LoadingPage extends FrameLayout {
         }
         showSafePage();
         if (state_current == STATE_SUCCESS) {
-            onSuccess();
+            onSuccess(resultState,view_success);
         }
 
     }
 
-    protected abstract void onSuccess();
+    protected abstract void onSuccess(ResultState resultState, View view_success);
 
     //设置URL地址
     protected abstract String url();
